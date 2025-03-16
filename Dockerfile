@@ -1,5 +1,4 @@
 FROM node:lts-alpine AS builder
-RUN apk add --no-cache tree  # Install tree
 RUN npm install -g @angular/cli@19.2.3
 WORKDIR /app
 COPY package*.json ./
