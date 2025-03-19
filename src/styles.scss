@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --blue-perfil: #007091;
+    --bg-color-perfil:#eceded;
+    --green-perfil: #009933;
+}
+.layout{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color-perfil);
+    box-sizing: border-box;
+    // overflow: hidden;
+}
+
+.button-primary {
+    @apply text-white focus:ring-4 font-medium 
+           rounded-lg text-sm px-5 py-2.5 
+           focus:outline-none;
+    background-color: var(--blue-perfil);
+}
+
+.button-primary:hover{
+    background-color: #025a74;
+}
