@@ -1,3 +1,5 @@
+//ESTE ARCHIVO DEBERA AGREGARSE AL GITIGNORE, YA QUE TENDREMOS UNO PARA CADA AMBIENTE DONDE HABRA UN CLIENTID Y UN CLIENTSECRET PARA CADA UNO
+
 import { AuthConfig } from 'angular-oauth2-oidc';
 
   export const authCodeFlowConfig: AuthConfig = {
