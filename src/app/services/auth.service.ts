@@ -33,7 +33,7 @@ export class AuthService {
   }
 
   getToken(){
-    return this.oauthSv.getAccessToken();
+    return this.oauthSv.getIdToken();
   }
 
   getIdentity(){
