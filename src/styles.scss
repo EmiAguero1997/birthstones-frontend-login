@@ -3,6 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrolling */
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-color-perfil);
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: center; /* Center the image */
+    background-size: auto; /* Ensures the full image is visible */
+}
+
 :root {
     --blue-perfil: #007091;
     --bg-color-perfil:#eceded;
