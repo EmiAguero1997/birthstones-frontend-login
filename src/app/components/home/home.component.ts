@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(()=>{
       this.getToken();
-    }, 100);
+    }, 500);
   }
 
   async getToken(){
