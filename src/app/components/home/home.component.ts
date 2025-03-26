@@ -20,12 +20,12 @@ export class HomeComponent implements OnInit {
     setTimeout(()=>{
       this.getToken();
       this.getIdentity();
-      window.location.href = redirectTopazUrl.url+'?token='+this.token+'?identity='+JSON.stringify(this.identity);
     }, 1000);
   }
 
   async getIdentity(){
     this.identity = await this.authSv.getIdentity();
+    window.location.href = redirectTopazUrl.url+'?token='+this.token+'?identity='+JSON.stringify(this.identity);
   }
 
   async getToken(){
