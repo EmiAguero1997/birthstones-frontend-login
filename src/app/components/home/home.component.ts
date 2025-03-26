@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { ButtonModule } from 'primeng/button';
+import { redirectTopazUrl } from '../../services/redirect-topaz-url';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +9,22 @@ import { ButtonModule } from 'primeng/button';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  token!:string;
   constructor(private authSv: AuthService){
-    let token = this.authSv.getToken();
-    let identity = this.authSv.getIdentity();
-    console.log('token: ', token);
-    console.log('identity: ', identity);
+    
+  }
+
+  ngOnInit(): void {
+    setTimeout(()=>{
+      this.getToken();
+    }, 100);
+  }
+
+  async getToken(){
+    this.token = await this.authSv.getToken();
+    console.log('token: ', this.token);
+    window.location.href = redirectTopazUrl.url+'?token='+this.token;
   }
 
   callExampleEndpoint(){
