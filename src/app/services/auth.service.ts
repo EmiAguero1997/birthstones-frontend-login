@@ -32,7 +32,7 @@ export class AuthService {
     this.oauthSv.revokeTokenAndLogout();
   }
 
-  getToken(){
+  async getToken(){
     return this.oauthSv.getIdToken();
   }
 
