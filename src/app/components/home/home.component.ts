@@ -11,6 +11,7 @@ import { redirectTopazUrl } from '../../services/redirect-topaz-url';
 })
 export class HomeComponent implements OnInit {
   token!:string;
+  identity!:any;
   constructor(private authSv: AuthService){
     
   }
@@ -18,13 +19,18 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(()=>{
       this.getToken();
+      this.getIdentity();
+      window.location.href = redirectTopazUrl.url+'?token='+this.token+'?identity='+this.identity;
     }, 1000);
+  }
+
+  async getIdentity(){
+    this.identity = await this.authSv.getIdentity();
   }
 
   async getToken(){
     this.token = await this.authSv.getToken();
     console.log('token: ', this.token);
-    window.location.href = redirectTopazUrl.url+'?token='+this.token;
   }
 
   callExampleEndpoint(){
