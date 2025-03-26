@@ -25,7 +25,8 @@ export class HomeComponent implements OnInit {
 
   async getIdentity(){
     this.identity = await this.authSv.getIdentity();
-    window.location.href = redirectTopazUrl.url+'?token='+this.token+'?identity='+JSON.stringify(this.identity);
+    let identity = btoa(JSON.stringify(this.identity))
+    window.location.href = redirectTopazUrl.url+'?token='+this.token+'?identity='+identity;
   }
 
   async getToken(){
