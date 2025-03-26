@@ -1,3 +1,3 @@
 export const redirectTopazUrl ={
-    url:'https://localhost:4202/home'
+    url:'https://topaz-main.vercel.app/home'
 }
