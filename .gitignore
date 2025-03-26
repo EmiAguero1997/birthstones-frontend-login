@@ -41,5 +41,3 @@ testem.log
 .DS_Store
 Thumbs.db
 
-/src/app/services/auth.config.ts
-/src/app/services/redirect-topaz-url.ts
