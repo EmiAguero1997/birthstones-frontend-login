@@ -42,3 +42,5 @@ testem.log
 Thumbs.db
 
 /src/app/services/redirect-topaz-url.ts
+
+/src/app/services/auth.config.ts
