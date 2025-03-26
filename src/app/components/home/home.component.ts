@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
     setTimeout(()=>{
       this.getToken();
       this.getIdentity();
-      window.location.href = redirectTopazUrl.url+'?token='+this.token+'?identity='+this.identity;
+      window.location.href = redirectTopazUrl.url+'?token='+this.token+'?identity='+JSON.stringify(this.identity);
     }, 1000);
   }
 
