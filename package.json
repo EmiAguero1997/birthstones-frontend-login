@@ -23,6 +23,7 @@
     "@tailwindcss/postcss": "^4.0.14",
     "angular-oauth2-oidc": "^19.0.0",
     "es-module-shims": "^1.5.12",
+    "firebase": "^11.5.0",
     "postcss": "^8.5.3",
     "primeng": "^19.0.10",
     "rxjs": "~7.8.0",
