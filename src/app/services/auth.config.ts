@@ -12,7 +12,7 @@ import { AuthConfig } from 'angular-oauth2-oidc';
 
     // The SPA's id. The SPA is registerd with this id at the auth-server
     // clientId: 'server.code',
-    clientId: '332005279061-av64ah8cufkg9f76kvotp9t41tek2bju.apps.googleusercontent.com',
+    clientId: '332005279061-fibdidl8qj4838vv370pt5s1ospt12j6.apps.googleusercontent.com',
 
     strictDiscoveryDocumentValidation: false,
 
@@ -24,7 +24,7 @@ import { AuthConfig } from 'angular-oauth2-oidc';
 
     responseType: 'code',
 
-    dummyClientSecret:'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',
+    dummyClientSecret:'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',
 
     // set the scope for the permissions the client should request
     // The first four are defined by OIDC.
